@@ -39,11 +39,11 @@ const Navbars = () => {
               </a>
             </div>
             <div className="nav-items max-xl:hidden">
-              <ul className="nav-item-list flex items-center font-medium gap-5">
+              <ul className="nav-item-list flex items-center text-primary-100 font-bold gap-5">
                 {navItemList.map((item, index) => (
                   <li
                     key={index}
-                    className="nav-item hover:text-sky-600 duration-200 cursor-pointer"
+                    className="nav-item hover:text-sky-600 duration-200 cursor-pointer min-w-16"
                   >
                     {item.title}
                   </li>
