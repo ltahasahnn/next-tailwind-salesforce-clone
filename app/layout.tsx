@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Salesforce",
+  title: "The Number CRM Solfware - Salesforce",
   description:
     "Personalize every experience along the customer journey with the Customer 360. Unify marketing, sales, service, commerce, and IT on the world's #1 CRM.",
 };
@@ -17,6 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="../assets/images/salesforce-no-type-logo.svg" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
