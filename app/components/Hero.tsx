@@ -7,7 +7,7 @@ const Hero = () => {
         <h1 className="text-themeText-100 font-bold text-5xl max-md:text-4xl">
           Try Salesforce Starter Suite for free.
         </h1>
-        <p className="text-lg">
+        <p className="text-lg font-light">
           Unite sales, service and email outreach in a single app. Try
           Salesforce Starter Suite today.
         </p>
