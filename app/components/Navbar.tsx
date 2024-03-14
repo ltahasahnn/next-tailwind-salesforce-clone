@@ -59,21 +59,21 @@ const Navbars = () => {
                   <span>00800 7253 3333</span>
                 </div>
 
-                <div className="search-icon xl:hover:bg-primary-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full">
+                <div className="search-icon xl:hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full">
                   <FaSearch />
                 </div>
-                <div className="globe-icon xl:hover:bg-primary-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full max-xl:hidden">
+                <div className="globe-icon xl:hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full max-xl:hidden">
                   <FaGlobe />
                 </div>
-                <div className="user-icon xl:hover:bg-primary-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full flex items-center gap-2 font-bold text-sm">
+                <div className="user-icon hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full flex items-center gap-2 font-bold text-sm">
                   <FaUser />
                   <span className="max-xl:hidden">Login</span>
                 </div>
               </div>
               <div className="ml-4">
                 <Button
-                  className="bg-secondary-100 border-secondary-100 hover:bg-secondary-200 hover:border-secondary-200 !w-32 text-base !px-2 !py-2"
-                  value="Try for Sales"
+                  className="bg-secondary-100 border-secondary-100 hover:bg-secondary-200 w-32 py-2 hover:border-secondary-200 max-xl:py-0.5 max-xl:text-sm max-xl:p-0 max-xl:w-24"
+                  value="Try for free"
                 />
               </div>
             </div>
