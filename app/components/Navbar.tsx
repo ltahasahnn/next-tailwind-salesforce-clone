@@ -1,4 +1,5 @@
 import { FaBars, FaSearch, FaGlobe, FaUser } from "react-icons/fa";
+import Button from "./Button";
 
 const Navbars = () => {
   const navItemList = [
@@ -14,9 +15,9 @@ const Navbars = () => {
   return (
     <header>
       <div className="nav bg-white">
-        <div className="xl:container text-sm max-xl:px-4 max-xl:h-14 max-xl:py-2 h-24 py-4 mx-auto">
+        <div className="xl:container text-sm max-xl:px-6 max-xl:h-14 max-xl:py-2 h-24 py-4 mx-auto">
           <div className="nav-wrapper h-full flex items-center gap-8">
-            <div className="nav-header-mobile h-full flex items-center gap-3 xl:hidden">
+            <div className="nav-header-mobile h-full flex items-center gap-5 xl:hidden">
               <FaBars className="text-2xl cursor-pointer" />
               <div className="nav-mobile-logo h-full">
                 <a className="h-14" href="">
@@ -51,7 +52,7 @@ const Navbars = () => {
             </div>
             <div className="utility-nav ml-auto flex items-center">
               <div className="utility icons flex items-center gap-4">
-                <div className="contact flex flex-col text-center max-xl:hidden">
+                <div className="contact flex flex-col font-light text-center max-xl:hidden">
                   <span className="underline hover:text-sky-600 duration-200 cursor-pointer">
                     Contact Us
                   </span>
@@ -70,9 +71,10 @@ const Navbars = () => {
                 </div>
               </div>
               <div className="ml-4">
-                <button className="px-4 py-2 xl:hover:bg-emerald-900 rounded-md font-medium bg-emerald-700 text-white">
-                  Try for Sales
-                </button>
+                <Button
+                  className="bg-emerald-700 border-emerald-700 hover:bg-emerald-800 hover:border-emerald-800 w-32 py-1.5"
+                  value="Try for Sales"
+                />
               </div>
             </div>
           </div>
