@@ -19,7 +19,7 @@ const News = () => {
 
   return (
     <div className="my-12 h-fit">
-      <h2 className="text-center max-md:text-3xl text-4xl max-md:mb-6 md:mb-20 font-semibold text-primary-100">
+      <h2 className="text-center max-md:text-3xl text-4xl max-md:mb-6 md:mb-20 font-semibold text-themeText-100">
         What's new at Salesforce?
       </h2>
 
@@ -36,11 +36,11 @@ const News = () => {
                 alt=""
               />
             </div>
-            <div className="flex flex-col aspect-auto justify-between h-60 max-md:h-40 max-md:py-8 max-lg:h-44 max-lg:space-y-0 max-lg:pt-6 max-lg:p-6 space-y-4 p-8 font-semibold text-slate-700">
+            <div className="flex flex-col aspect-auto justify-between h-60 max-md:h-40 max-md:py-8 max-lg:h-44 max-lg:space-y-0 max-lg:pt-6 max-lg:p-6 space-y-4 p-8 font-semibold text-themeText-100">
               <span className="text-2xl max-lg:text-lg max-md:text-xl">
                 {item.text}
               </span>
-              <span className="duration-300 hover:text-blue-600 hover:no-underline underline">
+              <span className="duration-300 hover:text-primary-100 hover:no-underline underline">
                 {item.link}
               </span>
             </div>
