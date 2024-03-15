@@ -17,19 +17,19 @@ const Navbars = () => {
       <div className="nav bg-white">
         <div className="xl:px-10 text-sm max-xl:px-6 max-xl:h-14 max-xl:py-2 h-24 py-4 mx-auto">
           <div className="h-full flex items-center gap-8">
-            <div className="h-full flex items-center gap-5 xl:hidden">
+            <div className="h-full flex items-center gap-5 max-sm:gap-3 xl:hidden">
               <FaBars className="text-2xl cursor-pointer" />
               <div className="h-full">
                 <a className="h-14" href="">
                   <img
-                    className="h-full my-auto"
+                    className="h-full my-auto max-sm:py-1"
                     src="../assets/images/salesforce-no-type-logo.svg"
                     alt=""
                   />
                 </a>
               </div>
             </div>
-            <div className=" h-full max-xl:hidden">
+            <div className="h-full max-xl:hidden">
               <a className="h-full" href="">
                 <img
                   className="h-14 my-auto"
@@ -72,7 +72,7 @@ const Navbars = () => {
               </div>
               <div className="ml-4">
                 <Button
-                  className="bg-secondary-100 montserrat font-medium border-secondary-100 hover:bg-secondary-200 !w-32 !py-2.5 hover:border-secondary-200 max-xl:py-0.5 max-xl:text-sm max-xl:p-0 max-xl:w-24"
+                  className="bg-secondary-100 font-bold border-secondary-100 hover:bg-secondary-200 !w-32 py-2.5 hover:border-secondary-200 max-xl:!py-0.5 max-xl:text-sm max-xl:p-0 max-xl:!w-24"
                   value="Try for free"
                 />
               </div>
