@@ -2,9 +2,9 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <div className="grid grid-cols-2 max-lg:grid-cols-1 max-lg:gap-10 w-full lg:h-4/6 items-center">
+    <div className="grid montserrat grid-cols-2 max-lg:grid-cols-1 max-lg:gap-10 w-full lg:h-4/6 items-center">
       <div className="flex flex-col max-lg:w-10/12 max-md:w-full max-lg:mx-auto gap-10 mt-10 font-medium">
-        <h1 className="text-themeText-100 font-bold text-5xl max-md:text-4xl">
+        <h1 className="text-themeText-100 leading-[3.5rem] font-extrabold text-5xl w-8/12 max-md:text-4xl">
           Try Salesforce Starter Suite for free.
         </h1>
         <p className="text-lg font-light">
