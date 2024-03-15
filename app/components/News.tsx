@@ -27,7 +27,7 @@ const News = () => {
         {list.map((item, index) => (
           <div
             key={index}
-            className="w-full cursor-pointer shadow-[0_2px_10px_0px_rgba(0,0,0,.3)] rounded-xl"
+            className="w-full cursor-pointer shadow-[0_2px_10px_0px_rgba(0,0,0,.2)] rounded-xl"
           >
             <div className="max-lg max-lg:h-44 max-md:h-fit">
               <img
@@ -36,7 +36,7 @@ const News = () => {
                 alt=""
               />
             </div>
-            <div className="flex flex-col aspect-auto justify-between h-60 max-md:h-40 max-md:py-8 max-lg:h-44 max-lg:space-y-0 max-lg:pt-6 max-lg:p-6 space-y-4 p-8 font-semibold text-themeText-100">
+            <div className="flex flex-col aspect-auto justify-between h-60 max-sm:h-48 max-sm:pt-12 max-sm:px-8 max-md:h-40 max-md:py-8 max-lg:h-44 max-lg:space-y-0 max-lg:pt-6 max-lg:p-6 space-y-4 p-8 font-semibold text-themeText-100">
               <span className="text-2xl max-lg:text-lg max-md:text-xl">
                 {item.text}
               </span>
