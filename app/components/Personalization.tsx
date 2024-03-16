@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "./Button";
 
 import PersonalalizationImage1 from "../../public/assets/images/state-of-sales-resource-card.webp";
 import PersonalalizationImage2 from "../../public/assets/images/php-rc-connections-series.webp";
