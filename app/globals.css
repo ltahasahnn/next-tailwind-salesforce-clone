@@ -7,3 +7,7 @@
 .montserrat{
   font-family: "Montserrat", sans-serif;
 }
+
+.clipPath{
+  clip-path: ellipse(50% 100% at center bottom);
+}
