@@ -18,7 +18,7 @@ const News = () => {
   ];
 
   return (
-    <div className="my-12 h-fit">
+    <div className="mb-12 mt-16">
       <h2 className="text-center max-md:text-3xl text-4xl max-md:mb-6 md:mb-20 font-semibold text-themeText-100">
         What's new at Salesforce?
       </h2>
