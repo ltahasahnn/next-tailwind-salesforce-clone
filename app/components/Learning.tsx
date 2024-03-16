@@ -1,20 +1,24 @@
 import Image from "next/image";
 import Button from "./Button";
 
+import LearningImage1 from "../../public/assets/images/56b5a2cb9fb731dbfe6b5b88cd855775_badge.webp";
+import LearningImage2 from "../../public/assets/images/b91b2499486a772a4eee8ce55aa32b57_badge.webp";
+import LearningImage3 from "../../public/assets/images/db2713f3bec133c96429ddc96373ed09_badge.webp";
+
 const Learning = () => {
   const list = [
     {
-      image: "../assets/images/56b5a2cb9fb731dbfe6b5b88cd855775_badge.webp",
+      image: LearningImage1,
       title: "Salesforce CRM",
       text: "Learn how to use customer relationship management (CRM) software to grow your business.",
     },
     {
-      image: "../assets/images/b91b2499486a772a4eee8ce55aa32b57_badge.webp",
+      image: LearningImage2,
       title: "Sales Cloud Basics",
       text: "Grow your business, boost productivity, and make smart decisions with Sales Cloud.",
     },
     {
-      image: "../assets/images/db2713f3bec133c96429ddc96373ed09_badge.webp",
+      image: LearningImage3,
       title: "Service Cloud Basics",
       text: "Supercharge your agents with omni-channel tools and an intelligent service platform.",
     },
