@@ -1,19 +1,22 @@
 import Image from "next/image";
+import CardImage1 from "../../public/assets/images/card-image-1.webp";
+import CardImage2 from "../../public/assets/images/card-image-2.webp";
+import CardImage3 from "../../public/assets/images/card-image-3.webp";
 
 const News = () => {
   const list = [
     {
-      image: "../assets/images/card-image-1.webp",
+      image: CardImage1,
       text: "Meet Starter Suite: the simple, powerful CRM suite.",
       link: "Watch demo",
     },
     {
-      image: "../assets/images/card-image-2.webp",
+      image: CardImage2,
       text: "Join the Salesblazer movement.",
       link: "Get started",
     },
     {
-      image: "../assets/images/card-image-3.webp",
+      image: CardImage3,
       text: "Grow your small business with a CRM designed for you.",
       link: "Explore the solution",
     },
