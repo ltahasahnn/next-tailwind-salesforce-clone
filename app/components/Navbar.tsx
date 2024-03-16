@@ -2,6 +2,7 @@ import { FaBars, FaSearch, FaGlobe, FaUser } from "react-icons/fa";
 import Button from "./Button";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
+import Image from "next/image";
 
 const Navbars = () => {
   const navItemList = [
@@ -24,7 +25,7 @@ const Navbars = () => {
               <FaBars className="text-2xl cursor-pointer" />
               <div className="h-full">
                 <a className="h-14" href="">
-                  <img
+                  <Image
                     className="h-full my-auto max-sm:py-1"
                     src="../assets/images/salesforce-no-type-logo.svg"
                     alt=""
@@ -34,7 +35,7 @@ const Navbars = () => {
             </div>
             <div className="h-full max-xl:hidden">
               <a className="h-full" href="">
-                <img
+                <Image
                   className="h-14 my-auto"
                   src="../assets/images/salesforce.svg"
                   alt=""
