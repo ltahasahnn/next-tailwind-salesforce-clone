@@ -1,24 +1,29 @@
 import Image from "next/image";
 
+import DemosImage1 from "../../public/assets/images/php-products-smb.webp";
+import DemosImage2 from "../../public/assets/images/php-products-sales.webp";
+import DemosImage3 from "../../public/assets/images/php-products-service.webp";
+import DemosImage4 from "../../public/assets/images/php-products-all-products.webp";
+
 const Demos = () => {
   const list = [
     {
-      image: "../assets/images/php-products-smb.webp",
+      image: DemosImage1,
       title: "Small Business",
       text: "Sell smarter and provide support faster in a single app.",
     },
     {
-      image: "../assets/images/php-products-sales.webp",
+      image: DemosImage2,
       title: "Sales",
       text: "Close more deals faster and unleash growth with AI-driven sales.",
     },
     {
-      image: "../assets/images/php-products-service.webp",
+      image: DemosImage3,
       title: "Services",
       text: "Easily scale service and boost productivity with AI support.",
     },
     {
-      image: "../assets/images/php-products-all-products.webp",
+      image: DemosImage4,
       title: "See all products",
       text: "Connect with customers in a new way with Customer 360 driven by AI.",
     },
