@@ -26,7 +26,7 @@ const Features = () => {
     },
   ];
   return (
-    <div className="flex py-20 items-center w-full text-themeText-100 justify-center text-center">
+    <div className="flex py-20 items-center w-full justify-center text-center">
       <div className="flex flex-col gap-16 max-sm:gap-12 w-full">
         <div className="w-full">
           <h2 className="text-4xl font-bold NotoSans max-xl:text-3xl">
@@ -43,7 +43,7 @@ const Features = () => {
           <Button
             value="See all industries"
             outline
-            className="border-primary-100 text-primary-100 w-48 py-3 max-md:w-full rounded-md"
+            className="w-48 py-3 max-md:w-full rounded-md"
           />
         </div>
 

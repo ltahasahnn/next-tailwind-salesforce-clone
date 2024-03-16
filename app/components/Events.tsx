@@ -27,7 +27,7 @@ const Events = () => {
     },
   ];
   return (
-    <div className="my-20 text-themeText-100">
+    <div className="my-20">
       <div>
         <div>
           <h2 className="text-4xl tracking-wide text-center mx-auto font-bold max-lg:max-w-lg max-[1439px]:text-3xl">
@@ -59,7 +59,10 @@ const Events = () => {
                 </h2>
 
                 <div className="text-start mt-auto">
-                  <a href="#" className="underline mt-auto hover:no-underline">
+                  <a
+                    href="#"
+                    className="underline mt-auto hover:no-underline hover:text-primary-100"
+                  >
                     {item.link}
                   </a>
                 </div>

@@ -24,7 +24,7 @@ const Learning = () => {
     },
   ];
   return (
-    <div className="my-20 text-themeText-100">
+    <div className="my-20">
       <div>
         <div className="flex flex-col text-center NotoSans gap-6">
           <h2 className="text-4xl font-bold mx-auto max-w-4xl max-md:max-w-full max-lg:max-w-xl max-[1380px]:text-3xl">
@@ -62,7 +62,10 @@ const Learning = () => {
                 </div>
 
                 <div className="text-start">
-                  <a href="#" className="underline mt-auto hover:no-underline">
+                  <a
+                    href="#"
+                    className="underline mt-auto hover:no-underline hover:text-primary-100"
+                  >
                     Start learning
                   </a>
                 </div>
@@ -75,7 +78,7 @@ const Learning = () => {
           <Button
             value="Learn for free"
             outline
-            className="mt-24 text-themeText-200 border-themeText-200 max-md:w-full"
+            className="mt-24 max-md:w-full"
           />
         </div>
       </div>
