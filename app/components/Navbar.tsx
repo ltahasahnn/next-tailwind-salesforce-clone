@@ -14,7 +14,8 @@ const Navbars = () => {
     { title: "Customers" },
     { title: "Learning" },
     { title: "Support" },
-    { title: "More" },
+    { title: "Company" },
+    { title: "Salesforce +" },
   ];
 
   return (
