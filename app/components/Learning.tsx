@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "./Button";
 
 const Learning = () => {
@@ -40,7 +41,7 @@ const Learning = () => {
               className="w-full p-6 rounded-2xl shadow-[0_3px_10px_0px_rgba(0,0,0,.2)]"
             >
               <div className="mx-auto w-28 h-28">
-                <img className="object-cover" src={item.image} alt="" />
+                <Image className="object-cover" src={item.image} alt="" />
               </div>
 
               <div className="flex flex-col gap-4 text-start montserrat">
