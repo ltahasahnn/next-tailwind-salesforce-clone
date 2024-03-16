@@ -21,8 +21,8 @@ const Customers = () => {
 
   return (
     <div className="flex flex-col text-center gap-16 text-themeText-100">
-      <div className="max-w-3xl max-[1160px]:max-w-xl max-md:w-full mx-auto">
-        <h2 className="!font-black xl:text-4xl max-xl:text-3xl mx-auto leading-10 tracking-[-0.32px] montserrat">
+      <div className="max-w-3xl max-[1160px]:max-w-2xl max-md:w-full mx-auto">
+        <h2 className="!font-black text-4xl max-xl:text-3xl mx-auto leading-10 tracking-[-0.32px] montserrat">
           See how companies drive customer success in a whole new way with
           Einstein 1.
         </h2>
