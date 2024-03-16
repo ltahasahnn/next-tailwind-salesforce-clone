@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Demos = () => {
   const list = [
     {
@@ -33,7 +35,7 @@ const Demos = () => {
         {list.map((item, index) => (
           <div key={index} className="">
             <div className="mb-6">
-              <img
+              <Image
                 className="object-cover"
                 draggable="false"
                 src={item.image}
