@@ -48,7 +48,7 @@ const Demos = () => {
               />
             </div>
 
-            <div className="h-32 max-sm:mb-4 max-lg:h-28 max-md:h-20 w-full">
+            <div className="h-32 max-sm:mb-4 max-sm:h-28 max-md:h-20 max-lg:h-28 w-full">
               <h3 className="mb-2 font-bold NotoSans max-md:text-2xl">
                 {item.title}
               </h3>
