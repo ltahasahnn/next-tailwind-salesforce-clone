@@ -11,7 +11,7 @@ export default function Home() {
       <Navbars />
       <div className="w-full h-dvh overflow-scroll">
         <div>
-          <div className="xl:container mx-auto h-full max-xl:px-6">
+          <div className="xl:container mx-auto h-full max-xl:px-10">
             <Hero />
             <News />
             <Demos />
