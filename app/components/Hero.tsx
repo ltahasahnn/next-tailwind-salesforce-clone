@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "./Button";
 
 const Hero = () => {
@@ -19,7 +20,7 @@ const Hero = () => {
       </div>
 
       <div className="h-full">
-        <img
+        <Image
           draggable="false"
           className="h-full w-full object-contain"
           src="../assets/images/hero-image.png"
