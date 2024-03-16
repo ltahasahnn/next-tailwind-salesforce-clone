@@ -12,7 +12,7 @@ const Hero = () => {
           Salesforce Starter Suite today.
         </p>
 
-        <div className="flex gap-2 max-md:flex-col max-lg:gap-6">
+        <div className="flex gap-2 max-md:flex-col md:max-lg:gap-6">
           <Button value="Start free trial" className="max-md:w-full" />
           <Button outline value="Watch Demos" className="max-md:w-full" />
         </div>
