@@ -12,12 +12,13 @@ import FeaturesImage2 from "../public/assets/images/hp-page-break-img-hills.webp
 import CRM from "./components/CRM";
 import Personalization from "./components/Personalization";
 import Events from "./components/Events";
+import Community from "./components/Community";
 
 export default function Home() {
   return (
     <main className="flex h-dvh overflow-hidden flex-col">
       <Navbar />
-      <div className="w-full h-dvh overflow-scroll">
+      <div className="w-full h-dvh overflow-scroll text-themeText-100">
         <div>
           <div className="xl:container mx-auto h-full max-xl:px-10">
             <Hero />
@@ -36,6 +37,7 @@ export default function Home() {
             <Image src={FeaturesImage2} alt="" />
             <div className="max-xl:px-6">
               <Events />
+              <Community />
             </div>
           </div>
         </div>
