@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
         outline
           ? "bg-transparent text-blue-600 hover:!bg-slate-200"
           : "text-white",
-        className && className
+        className
       )}
     >
       {value}
