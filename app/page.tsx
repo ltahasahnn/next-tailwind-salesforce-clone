@@ -10,6 +10,7 @@ import Image from "next/image";
 import FeaturesImage1 from "../public/assets/images/rounded.png";
 import FeaturesImage2 from "../public/assets/images/hp-page-break-img-hills.webp";
 import CRM from "./components/CRM";
+import Personalization from "./components/Personalization";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
               <Customers />
               <Learning />
               <CRM />
+              <Personalization />
             </div>
             <Image src={FeaturesImage2} alt="" />
           </div>
