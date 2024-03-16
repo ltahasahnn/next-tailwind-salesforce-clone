@@ -3,6 +3,8 @@ import Button from "./Button";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
+import MobileLogo from "../../public/assets/images/salesforce-no-type-logo.svg";
+import Logo from "../../public/assets/images/salesforce.svg";
 
 const Navbars = () => {
   const navItemList = [
@@ -27,7 +29,7 @@ const Navbars = () => {
                 <a className="h-14" href="">
                   <Image
                     className="h-full my-auto max-sm:py-1"
-                    src="../assets/images/salesforce-no-type-logo.svg"
+                    src={MobileLogo}
                     alt=""
                   />
                 </a>
@@ -35,11 +37,7 @@ const Navbars = () => {
             </div>
             <div className="h-full max-xl:hidden">
               <a className="h-full" href="">
-                <Image
-                  className="h-14 my-auto"
-                  src="../assets/images/salesforce.svg"
-                  alt=""
-                />
+                <Image className="h-14 my-auto" src={Logo} alt="" />
               </a>
             </div>
             <div className="nav-items max-xl:hidden">
