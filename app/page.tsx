@@ -7,6 +7,9 @@ import Customers from "./components/Customers";
 import Learning from "./components/Learning";
 import Image from "next/image";
 
+import FeaturesImage1 from "../public/assets/images/rounded.png";
+import FeaturesImage2 from "../public/assets/images/hp-page-break-img-hills.webp";
+
 export default function Home() {
   return (
     <main className="flex h-dvh overflow-hidden flex-col">
@@ -20,12 +23,12 @@ export default function Home() {
             <Features />
           </div>
           <div>
-            <Image src="../assets/images/rounded.png" alt="" />
+            <Image src={FeaturesImage1} alt="" />
             <div className="max-xl:px-6">
               <Customers />
               <Learning />
             </div>
-            <Image src="../assets/images/hp-page-break-img-hills.webp" alt="" />
+            <Image src={FeaturesImage2} alt="" />
           </div>
         </div>
       </div>
