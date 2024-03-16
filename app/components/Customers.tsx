@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "./Button";
 
 const Customers = () => {
@@ -44,7 +45,7 @@ const Customers = () => {
             className="shadow-[0_3px_8px_0_rgba(0,0,0,.15)] w-full flex h-24 items-center justify-center rounded-lg min-w-48 max-[1160px]:max-w-52"
             key={index}
           >
-            <img
+            <Image
               className="object-cover max-sm:h-8 max-md:h-8 sm:max-h-12"
               src={item.image}
               alt=""
