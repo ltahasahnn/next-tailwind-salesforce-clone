@@ -1,22 +1,27 @@
 import Image from "next/image";
 import Button from "./Button";
 
+import FeaturesImage1 from "../../public/assets/images/financial-day.svg";
+import FeaturesImage2 from "../../public/assets/images/placeholder25.svg";
+import FeaturesImage3 from "../../public/assets/images/health-day.svg";
+import FeaturesImage4 from "../../public/assets/images/manufacturing-day.svg";
+
 const Features = () => {
   const list = [
     {
-      avatar: "../assets/images/financial-day.svg",
+      avatar: FeaturesImage1,
       text: "Financial Services",
     },
     {
-      avatar: "../assets/images/placeholder25.svg",
+      avatar: FeaturesImage2,
       text: "Retail",
     },
     {
-      avatar: "../assets/images/health-day.svg",
+      avatar: FeaturesImage3,
       text: "Healthcare & Life Sciences",
     },
     {
-      avatar: "../assets/images/manufacturing-day.svg",
+      avatar: FeaturesImage4,
       text: "Manufacturing",
     },
   ];
