@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 
-.montserrat{
-  font-family: "Montserrat", sans-serif;
+.NotoSans{
+  font-family: "Noto Sans", sans-serif;
 }
 
 .clipPath{

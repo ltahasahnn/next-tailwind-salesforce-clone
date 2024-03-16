@@ -26,7 +26,7 @@ const Learning = () => {
   return (
     <div className="my-20 text-themeText-100">
       <div>
-        <div className="flex flex-col text-center montserrat gap-6">
+        <div className="flex flex-col text-center NotoSans gap-6">
           <h2 className="text-4xl font-bold mx-auto max-w-4xl max-md:max-w-full max-lg:max-w-xl max-[1380px]:text-3xl">
             Learn valuable skills for free, with Trailhead.
           </h2>
@@ -48,7 +48,7 @@ const Learning = () => {
                 <Image className="object-cover" src={item.image} alt="" />
               </div>
 
-              <div className="flex flex-col gap-4 text-start montserrat">
+              <div className="flex flex-col gap-4 text-start NotoSans">
                 <div className="bg-primary-200 rounded-full flex text-xs w-16 h-9 font-semibold max-lg:mt-4">
                   <p className="m-auto">Module</p>
                 </div>

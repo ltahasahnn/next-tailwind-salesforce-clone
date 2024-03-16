@@ -32,7 +32,7 @@ const Demos = () => {
   return (
     <div className="flex flex-col gap-16 text-text-100 py-12 text-themeText-100">
       <div>
-        <h2 className="mx-auto text-4xl text-center montserrat font-black max-w-3xl max-sm:text-2xl max-md:w-full max-xl:text-3xl max-xl:max-w-3xl">
+        <h2 className="mx-auto text-4xl text-center NotoSans font-black max-w-3xl max-sm:text-2xl max-md:w-full max-xl:text-3xl max-xl:max-w-3xl">
           Learn how Salesforce helps you work smarter and grow faster.
         </h2>
       </div>
@@ -49,7 +49,7 @@ const Demos = () => {
             </div>
 
             <div className="h-32 max-sm:mb-4 max-lg:h-28 max-md:h-20 w-full">
-              <h3 className="mb-2 font-bold montserrat max-md:text-2xl">
+              <h3 className="mb-2 font-bold NotoSans max-md:text-2xl">
                 {item.title}
               </h3>
               <div>

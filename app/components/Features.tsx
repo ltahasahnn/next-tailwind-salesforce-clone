@@ -29,7 +29,7 @@ const Features = () => {
     <div className="flex py-20 items-center w-full text-themeText-100 justify-center text-center">
       <div className="flex flex-col gap-16 max-sm:gap-12 w-full">
         <div className="w-full">
-          <h2 className="text-4xl font-bold montserrat max-xl:text-3xl">
+          <h2 className="text-4xl font-bold NotoSans max-xl:text-3xl">
             Find innovations for any industry.
           </h2>
 
