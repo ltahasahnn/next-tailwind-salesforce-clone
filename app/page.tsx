@@ -11,6 +11,7 @@ import FeaturesImage1 from "../public/assets/images/rounded.png";
 import FeaturesImage2 from "../public/assets/images/hp-page-break-img-hills.webp";
 import CRM from "./components/CRM";
 import Personalization from "./components/Personalization";
+import Events from "./components/Events";
 
 export default function Home() {
   return (
@@ -33,6 +34,9 @@ export default function Home() {
               <Personalization />
             </div>
             <Image src={FeaturesImage2} alt="" />
+            <div className="max-xl:px-6">
+              <Events />
+            </div>
           </div>
         </div>
       </div>
