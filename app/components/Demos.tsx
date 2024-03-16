@@ -25,28 +25,30 @@ const Demos = () => {
   return (
     <div className="flex flex-col gap-16 text-text-100 py-12 text-themeText-100">
       <div>
-        <h2 className="mx-auto w-7/12 max-xl:w-8/12 max-sm:text-3xl max-lg:w-11/12 max-md:w-full text-[2.25rem] text-center montserrat font-bold">
+        <h2 className="mx-auto text-4xl text-center montserrat font-black max-w-3xl max-sm:text-2xl max-md:w-full max-xl:text-3xl max-xl:max-w-3xl">
           Learn how Salesforce helps you work smarter and grow faster.
         </h2>
       </div>
-      <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 max-lg:gap-6 max-lg:px-12 max-md:px-0 gap-12">
+      <div className="grid grid-cols-4 gap-12 mx-auto max-md:grid-cols-1 max-md:w-full max-lg:max-w-2xl max-lg:grid-cols-2 max-lg:gap-6">
         {list.map((item, index) => (
-          <div key={index} className="p-1">
+          <div key={index} className="">
             <div className="mb-6">
               <img
-                className="w-full h-full aspect-square"
+                className="object-cover"
                 draggable="false"
                 src={item.image}
                 alt=""
               />
             </div>
 
-            <div className="h-32 max-sm:mb-4 max-lg:h-28 max-md:h-20">
-              <h3 className="mb-2 font-bold montserrat max-sm:text-2xl">
+            <div className="h-32 max-sm:mb-4 max-lg:h-28 max-md:h-20 w-full">
+              <h3 className="mb-2 font-bold montserrat max-md:text-2xl">
                 {item.title}
               </h3>
               <div>
-                <p className="text-md">{item.text}</p>
+                <p className="text-sm max-lg:text-base max-md:text-lg">
+                  {item.text}
+                </p>
               </div>
             </div>
 
