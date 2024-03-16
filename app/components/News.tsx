@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const News = () => {
   const list = [
     {
@@ -30,7 +32,7 @@ const News = () => {
             className="w-full cursor-pointer shadow-[0_2px_10px_0px_rgba(0,0,0,.2)] rounded-xl"
           >
             <div className="max-lg max-lg:h-44 max-md:h-fit">
-              <img
+              <Image
                 className="w-full rounded-t-xl h-full square-radio object-cover"
                 src={item.image}
                 alt=""
