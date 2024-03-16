@@ -1,11 +1,7 @@
-import {
-  FaBars,
-  FaSearch,
-  FaGlobe,
-  FaUser,
-  FaChevronCircleDown,
-} from "react-icons/fa";
+import { FaBars, FaSearch, FaGlobe, FaUser } from "react-icons/fa";
 import Button from "./Button";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import clsx from "clsx";
 
 const Navbars = () => {
   const navItemList = [
@@ -16,6 +12,7 @@ const Navbars = () => {
     { title: "Support" },
     { title: "Company" },
     { title: "Salesforce +" },
+    { title: "More" },
   ];
 
   return (
@@ -45,13 +42,20 @@ const Navbars = () => {
               </a>
             </div>
             <div className="nav-items max-xl:hidden">
-              <ul className="nav-item-list flex items-center text-base text-themeText-100 font-bold gap-8">
+              <ul className="nav-item-list flex items-center text-base text-themeText-100 font-bold gap-5 max-[1380px]:gap-8">
                 {navItemList.map((item, index) => (
                   <li
                     key={index}
-                    className="nav-item hover:text-primary-100 duration-200 cursor-pointer min-w-16"
+                    className={clsx(
+                      "nav-item flex items-center hover:text-primary-100 duration-200 cursor-pointer min-w-16",
+                      index > 4 && index < 7 && "max-[1380px]:hidden",
+                      index === 7 && "min-[1380px]:hidden"
+                    )}
                   >
                     {item.title}
+                    {index === 7 && (
+                      <ChevronDownIcon className="w-5 h-5 ml-2" />
+                    )}
                   </li>
                 ))}
               </ul>
