@@ -1,4 +1,10 @@
-import { FaBars, FaSearch, FaGlobe, FaUser } from "react-icons/fa";
+import {
+  FaBars,
+  FaSearch,
+  FaGlobe,
+  FaUser,
+  FaChevronCircleDown,
+} from "react-icons/fa";
 import Button from "./Button";
 
 const Navbars = () => {
@@ -8,8 +14,7 @@ const Navbars = () => {
     { title: "Customers" },
     { title: "Learning" },
     { title: "Support" },
-    { title: "Company" },
-    { title: "Salesforce+" },
+    { title: "More" },
   ];
 
   return (
@@ -56,7 +61,7 @@ const Navbars = () => {
                   <span className="underline hover:text-primary-100 duration-200 cursor-pointer">
                     Contact Us
                   </span>
-                  <span>00800 7253 3333</span>
+                  <span>1-800-664-9073</span>
                 </div>
 
                 <div className="search-icon xl:hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full">
