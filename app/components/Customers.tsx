@@ -1,22 +1,28 @@
 import Image from "next/image";
 import Button from "./Button";
 
+import CustomersImage1 from "../../public/assets/images/logo-wall-turtlebay.webp";
+import CustomersImage2 from "../../public/assets/images/logo-wall-gucci.webp";
+import CustomersImage3 from "../../public/assets/images/logo-wall-wonolo.webp";
+import CustomersImage4 from "../../public/assets/images/logo-wall-wonolo-1.webp";
+import CustomersImage5 from "../../public/assets/images/logo-wall-baca.webp";
+
 const Customers = () => {
   const list = [
     {
-      image: "../assets/images/logo-wall-turtlebay.webp",
+      image: CustomersImage1,
     },
     {
-      image: "../assets/images/logo-wall-gucci.webp",
+      image: CustomersImage2,
     },
     {
-      image: "../assets/images/logo-wall-wonolo.webp",
+      image: CustomersImage3,
     },
     {
-      image: "../assets/images/logo-wall-wonolo-1.webp",
+      image: CustomersImage4,
     },
     {
-      image: "../assets/images/logo-wall-baca.webp",
+      image: CustomersImage5,
     },
   ];
 
@@ -46,7 +52,7 @@ const Customers = () => {
             key={index}
           >
             <Image
-              className="object-cover max-sm:h-8 max-md:h-8 sm:max-h-12"
+              className="object-cover max-sm:h-8 sm:max-h-12 max-md:h-8 w-fit"
               src={item.image}
               alt=""
             />
