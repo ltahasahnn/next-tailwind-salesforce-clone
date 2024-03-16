@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "./Button";
+import HeroImage from "../../public/assets/images/hero-image.png";
 
 const Hero = () => {
   return (
@@ -23,7 +24,7 @@ const Hero = () => {
         <Image
           draggable="false"
           className="h-full w-full object-contain"
-          src="../assets/images/hero-image.png"
+          src={HeroImage}
           alt=""
         />
       </div>
