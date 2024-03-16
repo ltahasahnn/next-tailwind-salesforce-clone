@@ -4,7 +4,7 @@ import CRMImage from "../../public/assets/images/php-rc-what-is-crm.webp";
 
 const CRM = () => {
   return (
-    <div className="text-themeText-100 NotoSans max-xl:mx-auto max-lg:max-w-3xl max-xl:max-w-5xl max-md:max-w-full">
+    <div className="NotoSans max-xl:mx-auto max-lg:max-w-3xl max-xl:max-w-5xl max-md:max-w-full">
       <div className="text-center mb-20">
         <h2 className="text-5xl font-bold mx-auto max-w-4xl max-lg:max-w-full max-lg:tracking-wide max-xl:text-4xl max-xl:max-w-2xl max-[1439px]:text-4xl">
           All sorts of content. All to help you grow.
@@ -24,11 +24,7 @@ const CRM = () => {
               </p>
             </div>
           </div>
-          <Button
-            className="text-themeText-200 border-themeText-200 max-md:w-full"
-            outline
-            value="Discover CRM"
-          />
+          <Button className="max-md:w-full" outline value="Discover CRM" />
         </div>
 
         <div>
