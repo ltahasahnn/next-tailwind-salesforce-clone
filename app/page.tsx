@@ -15,6 +15,7 @@ import Events from "./components/Events";
 import Community from "./components/Community";
 import Discover from "./components/Discover";
 import FreeTrial from "./components/FreeTrial";
+import NewsLetter from "./components/NewsLetter";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
               <Community />
               <Discover />
               <FreeTrial />
+              <NewsLetter />
             </div>
           </div>
         </div>
