@@ -1,14 +1,20 @@
 "use client";
 
-import { FaBars, FaSearch, FaGlobe, FaUser } from "react-icons/fa";
+import { FaBars, FaSearch, FaGlobe, FaUser, FaPhone } from "react-icons/fa";
 import Button from "./Button";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import {
+  ChevronDownIcon,
+  ChevronRightIcon,
+  UserIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
 import MobileLogo from "../../public/assets/images/salesforce-no-type-logo.svg";
 import Logo from "../../public/assets/images/salesforce.svg";
 import { useState } from "react";
 import { IoTriangle } from "react-icons/io5";
+import { FaXmark } from "react-icons/fa6";
 
 const Navbars = () => {
   const navItemList = [
@@ -25,6 +31,7 @@ const Navbars = () => {
   const [navigationWrapper, setNavigationWrapper] = useState<boolean>(false);
   const [languageWrapper, setLanguageWrapper] = useState<boolean>(false);
   const [loginWrapper, setLoginWrapper] = useState<boolean>(false);
+  const [isOpen, setOpen] = useState<boolean>(true);
 
   const loginWrapperList = [
     {
@@ -87,14 +94,35 @@ const Navbars = () => {
       ],
     },
   ];
+  const navList = [
+    {
+      icon: FaUser,
+      title: "Login",
+    },
+    {
+      icon: FaPhone,
+      title: "Contact",
+    },
+    {
+      icon: FaGlobe,
+      title: "Change Region",
+    },
+  ];
 
   return (
     <header>
-      <div className="nav bg-white">
+      <div className="nav bg-white relative">
         <div className="xl:px-10 text-sm max-xl:px-6 max-xl:h-14 max-xl:py-2 h-24 py-4 mx-auto">
           <div className="h-full flex items-center gap-8">
             <div className="h-full flex items-center gap-5 max-sm:gap-3 xl:hidden">
-              <FaBars className="text-2xl cursor-pointer" />
+              <FaBars
+                onClick={() => setOpen(!isOpen)}
+                className={clsx("text-2xl cursor-pointer", isOpen && "hidden")}
+              />
+              <FaXmark
+                onClick={() => setOpen(!isOpen)}
+                className={clsx("text-2xl cursor-pointer", !isOpen && "hidden")}
+              />
               <div className="h-full">
                 <a className="h-14" href="">
                   <Image
@@ -300,6 +328,49 @@ const Navbars = () => {
             </div>
           </div>
         </div>
+
+        {isOpen && (
+          <div>
+            <div className="absolute top-full left-0 bg-white w-6/12 h-dvh p-6 px-8 flex flex-col gap-8 text-themeText-100 max-md:w-full">
+              <ul className="flex flex-col gap-7">
+                {navItemList.map((item, index) => (
+                  <li
+                    key={index}
+                    className={clsx(
+                      "flex justify-between text-2xl font-bold",
+                      index === 7 && "hidden"
+                    )}
+                  >
+                    {item.title}
+
+                    <ChevronRightIcon className="w-7 h-7 text-slate-500" />
+                  </li>
+                ))}
+              </ul>
+
+              <hr />
+
+              <ul className="flex flex-col gap-5">
+                {navList.map((item, index) => (
+                  <li key={index} className="flex gap-2">
+                    <item.icon
+                      className={clsx("w-5 h-5", index === 1 && "rotate-90")}
+                    />
+                    {item.title}
+
+                    <ChevronRightIcon className="ml-auto w-7 h-7" />
+                  </li>
+                ))}
+              </ul>
+
+              <div className="font-bold mb-16 mt-auto text-center">
+                <a href="#">00800 7253 3333</a>
+              </div>
+            </div>
+
+            <div className="absolute top-full right-0 w-6/12 h-dvh bg-[rgba(0,0,0,.2)] max-md:hidden"></div>
+          </div>
+        )}
       </div>
       <div className="nav-sticky"></div>
     </header>
