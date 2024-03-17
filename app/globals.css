@@ -18,3 +18,7 @@
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
+
+.footerClipPath{
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+}
