@@ -28,8 +28,8 @@ export default function Home() {
   return (
     <main className="flex h-dvh overflow-hidden flex-col">
       <Navbar />
-      <Brand />
       <div className="w-full h-fit overflow-scroll text-themeText-100">
+        <Brand />
         <div className="h-fit">
           <div className="xl:container mx-auto h-full max-xl:px-10">
             <Hero />
