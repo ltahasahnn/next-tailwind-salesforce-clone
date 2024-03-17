@@ -30,7 +30,7 @@ const Demos = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-16 text-text-100 py-12">
+    <div className="flex flex-col gap-16 text-text-100 py-12 mx-auto max-w-7xl">
       <div>
         <h2 className="mx-auto text-4xl text-center NotoSans font-black max-w-3xl max-sm:text-2xl max-md:w-full max-xl:text-3xl max-xl:max-w-3xl">
           Learn how Salesforce helps you work smarter and grow faster.
