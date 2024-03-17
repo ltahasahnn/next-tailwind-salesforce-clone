@@ -4,9 +4,9 @@ import HeroImage from "../../public/assets/images/hero-image.png";
 
 const Hero = () => {
   return (
-    <div className="grid NotoSans grid-cols-2 w-full lg:h-4/6 items-center max-lg:gap-10 max-lg:grid-cols-1 mx-auto max-lg:max-w-2xl max-[1439px]:max-w-7xl">
+    <div className="grid NotoSans grid-cols-2 w-full max-w-7xl lg:h-4/6 items-center max-lg:gap-10 max-lg:grid-cols-1 mx-auto max-lg:max-w-2xl">
       <div className="flex flex-col gap-10 mt-10 font-medium">
-        <h1 className="text-themeText-100 max-sm:w-full font-black text-5xl max-xl:max-w-lg max-lg:max-w-full max-md:text-4xl">
+        <h1 className="text-themeText-100 font-black xl:tracking-wider text-5xl xl:max-w-lg max-sm:w-full max-md:text-4xl max-lg:max-w-full max-xl:max-w-lg">
           Try Salesforce Starter Suite for free.
         </h1>
         <p className="text-xl font-light xl:mr-auto xl:max-w-lg max-xl:max-w-md max-lg:max-w-full">
