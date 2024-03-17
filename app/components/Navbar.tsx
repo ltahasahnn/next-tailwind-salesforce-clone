@@ -1,3 +1,5 @@
+"use client";
+
 import { FaBars, FaSearch, FaGlobe, FaUser } from "react-icons/fa";
 import Button from "./Button";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -5,6 +7,8 @@ import clsx from "clsx";
 import Image from "next/image";
 import MobileLogo from "../../public/assets/images/salesforce-no-type-logo.svg";
 import Logo from "../../public/assets/images/salesforce.svg";
+import { useState } from "react";
+import { IoTriangle } from "react-icons/io5";
 
 const Navbars = () => {
   const navItemList = [
@@ -16,6 +20,72 @@ const Navbars = () => {
     { title: "Company" },
     { title: "Salesforce +" },
     { title: "More" },
+  ];
+
+  const [navigationWrapper, setNavigationWrapper] = useState<boolean>(false);
+  const [languageWrapper, setLanguageWrapper] = useState<boolean>(false);
+  const [loginWrapper, setLoginWrapper] = useState<boolean>(false);
+
+  const loginWrapperList = [
+    {
+      text: "Products",
+    },
+    {
+      text: "Salesforce",
+      icon: MobileLogo,
+    },
+    {
+      text: "Marketing Cloud",
+    },
+    {
+      text: "Experiences",
+    },
+    {
+      text: "Trailblazer Account",
+    },
+    {
+      text: "Access Trailhead, your Trailblazer profile, community, learning, original series, events, support, and more.",
+    },
+  ];
+  const languageWrapperList = [
+    {
+      title: "Americas",
+      text: [
+        "América Latina",
+        "(Español)",
+        "Brasil (Português)",
+        "Canada (English)",
+        "Canada (Français)",
+        "United States (English)",
+      ],
+    },
+    {
+      title: "Europe, Middle East, and Africa",
+      text: [
+        "España (Español)",
+        "Deutschland (Deutsch)",
+        "France (Français)",
+        "Italia (Italiano)",
+        "Nederland (Nederlands)",
+        "Sverige (Svenska)",
+        "United Kingdom (English)",
+        "All other countries (English)",
+      ],
+    },
+    {
+      title: "Asia Pacific",
+      text: [
+        "Australia & New Zealand",
+        "English)",
+        "India (English)",
+        "日本 (日本語)",
+        "中国 (简体中文)",
+        "台灣 (繁體中文)",
+        "한국 (한국어)",
+        "ประเทศไทย (ไทย)",
+        "All other countries (English)",
+      ],
+    },
   ];
 
   return (
@@ -41,9 +111,15 @@ const Navbars = () => {
               </a>
             </div>
             <div className="nav-items max-xl:hidden">
-              <ul className="nav-item-list flex items-center text-base text-themeText-100 font-bold gap-5 max-[1380px]:gap-8">
+              <ul className="nav-item-list flex items-center text-base text-themeText-100 font-semibold gap-5 max-[1380px]:gap-8 relative">
                 {navItemList.map((item, index) => (
                   <li
+                    onMouseEnter={() =>
+                      index === 7 && setNavigationWrapper(true)
+                    }
+                    onMouseLeave={() =>
+                      index === 7 && setNavigationWrapper(false)
+                    }
                     key={index}
                     className={clsx(
                       "nav-item flex items-center hover:text-primary-100 duration-200 cursor-pointer min-w-16",
@@ -57,6 +133,23 @@ const Navbars = () => {
                     )}
                   </li>
                 ))}
+
+                {navigationWrapper && (
+                  <div
+                    onMouseEnter={() => setLanguageWrapper(true)}
+                    onMouseLeave={() => setLanguageWrapper(false)}
+                    className="absolute w-20 right-0 top-full flex flex-col"
+                  >
+                    <div className="w-5 h-5 left-2/4 translate-x-[-50%] absolute mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
+                      <IoTriangle />
+                    </div>
+
+                    <div className="absolute right-[-100px] w-80 bg-white top-5 drop-shadow-[0_0_2px_rgba(0,0,0,.15)] rounded-xl p-8 flex flex-col gap-4">
+                      <a href="#">Company</a>
+                      <a href="#">Salesforce+</a>
+                    </div>
+                  </div>
+                )}
               </ul>
             </div>
             <div className="ml-auto flex items-center">
@@ -71,14 +164,129 @@ const Navbars = () => {
                 <div className="search-icon xl:hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full">
                   <FaSearch />
                 </div>
-                <div className="globe-icon xl:hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full max-xl:hidden">
-                  <FaGlobe />
+                <div className="relative">
+                  <div
+                    onMouseEnter={() => setLanguageWrapper(true)}
+                    onMouseLeave={() => setLanguageWrapper(false)}
+                    className="globe-icon xl:hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full max-xl:hidden"
+                  >
+                    <FaGlobe />
+                  </div>
+
+                  {languageWrapper && (
+                    <div
+                      onMouseEnter={() => setLanguageWrapper(true)}
+                      onMouseLeave={() => setLanguageWrapper(false)}
+                      className="absolute w-full top-full flex flex-col max-xl:hidden"
+                    >
+                      <div className="w-5 h-5 left-2/4 translate-x-[-50%] absolute mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
+                        <IoTriangle />
+                      </div>
+
+                      <div className="bg-white min-w-96 absolute right-[-200px] mt-5 border-l shadow-[0_1px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl z-50">
+                        <h3 className="font-bold text-xl mb-5">
+                          Change Region
+                        </h3>
+
+                        <div className="flex h-full justify-between">
+                          {languageWrapperList.map((item, index) => (
+                            <div
+                              className={clsx(
+                                "min-w-40 flex flex-col h-52",
+                                index === 1 && "px-8 mx-10 border-x-2 min-w-64",
+                                index === 2 && "min-w-52"
+                              )}
+                            >
+                              <span className="mb-2 trackig-wider">
+                                {item.title}
+                              </span>
+
+                              <ul>
+                                {item.text.map((text, idx) => (
+                                  <li
+                                    key={index}
+                                    className={clsx(
+                                      "underline text-sm !text-zinc-600",
+                                      index === 1 &&
+                                        idx === 7 &&
+                                        "text-themeText-200"
+                                    )}
+                                  >
+                                    {text}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div className="user-icon hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full flex items-center gap-4 font-bold text-sm">
-                  <FaUser />
-                  <span className="max-xl:hidden">Login</span>
+
+                <div className="relative">
+                  <div
+                    onMouseEnter={() => setLoginWrapper(true)}
+                    onMouseLeave={() => setLoginWrapper(false)}
+                    className="user-icon hover:bg-primary-200 hover:text-themeText-200 xl:hover:text-primary-100 duration-100 cursor-pointer p-3 rounded-full flex items-center gap-2 font-bold text-sm"
+                  >
+                    <FaUser />
+                    <span className="max-xl:hidden text-xs">Login</span>
+                  </div>
+
+                  {loginWrapper && (
+                    <div className="absolute w-80 left-2/4 translate-x-[-50%] top-full flex flex-col max-xl:hidden">
+                      <div className="w-5 h-5 mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
+                        <IoTriangle />
+                      </div>
+
+                      <div className="bg-white border-l shadow-[0_3px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl z-50">
+                        <h3 className="font-bold text-xl">Login</h3>
+
+                        <ul className="flex flex-col my-6">
+                          {loginWrapperList.map((item, index) => (
+                            <li
+                              className={clsx(
+                                "flex items-center gap-2 mb-4",
+                                index > 0 && "underline cursor-pointer",
+                                index > 2 && "hidden"
+                              )}
+                              key={index}
+                            >
+                              {item.text}
+                              {item.icon && (
+                                <Image
+                                  src={item.icon}
+                                  className="h-5 w-fit"
+                                  alt=""
+                                />
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+
+                        <hr className="bg-zinc-300" />
+
+                        <ul className="flex flex-col my-6">
+                          {loginWrapperList.map((item, index) => (
+                            <li
+                              className={clsx(
+                                "flex items-center gap-2 mb-4",
+                                index === 4 && "underline cursor-pointer",
+                                index < 3 && "hidden"
+                              )}
+                              key={index}
+                            >
+                              {item.text}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
+
               <div className="ml-4">
                 <Button
                   className="bg-secondary-100 font-bold border-secondary-100 hover:bg-secondary-200 !w-32 py-2.5 hover:border-secondary-200 max-xl:!py-0.5 max-xl:text-sm max-xl:p-0 max-xl:!w-24"
