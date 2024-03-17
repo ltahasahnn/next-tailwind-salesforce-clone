@@ -13,6 +13,7 @@ import CRM from "./components/CRM";
 import Personalization from "./components/Personalization";
 import Events from "./components/Events";
 import Community from "./components/Community";
+import Discover from "./components/Discover";
 
 export default function Home() {
   return (
@@ -38,6 +39,7 @@ export default function Home() {
             <div className="max-xl:px-6">
               <Events />
               <Community />
+              <Discover />
             </div>
           </div>
         </div>
