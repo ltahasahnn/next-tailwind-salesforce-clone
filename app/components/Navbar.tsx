@@ -136,8 +136,8 @@ const Navbars = () => {
 
                 {navigationWrapper && (
                   <div
-                    onMouseEnter={() => setLanguageWrapper(true)}
-                    onMouseLeave={() => setLanguageWrapper(false)}
+                    onMouseEnter={() => setNavigationWrapper(true)}
+                    onMouseLeave={() => setNavigationWrapper(false)}
                     className="absolute w-20 right-0 top-full flex flex-col"
                   >
                     <div className="w-5 h-5 left-2/4 translate-x-[-50%] absolute mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
@@ -192,30 +192,30 @@ const Navbars = () => {
                           {languageWrapperList.map((item, index) => (
                             <div
                               className={clsx(
-                                "min-w-40 flex flex-col h-52",
+                                "min-w-40 flex flex-col h-64",
                                 index === 1 && "px-8 mx-10 border-x-2 min-w-64",
                                 index === 2 && "min-w-52"
                               )}
                             >
-                              <span className="mb-2 trackig-wider">
+                              <span className="mb-4 trackig-wider">
                                 {item.title}
                               </span>
 
-                              <ul>
+                              <div>
                                 {item.text.map((text, idx) => (
-                                  <li
+                                  <div
                                     key={index}
                                     className={clsx(
-                                      "underline text-sm !text-zinc-600",
+                                      "underline text-sm mb-1 !text-zinc-600",
                                       index === 1 &&
                                         idx === 7 &&
                                         "text-themeText-200"
                                     )}
                                   >
                                     {text}
-                                  </li>
+                                  </div>
                                 ))}
-                              </ul>
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -235,7 +235,11 @@ const Navbars = () => {
                   </div>
 
                   {loginWrapper && (
-                    <div className="absolute w-80 left-2/4 translate-x-[-50%] top-full flex flex-col max-xl:hidden">
+                    <div
+                      onMouseEnter={() => setLoginWrapper(true)}
+                      onMouseLeave={() => setLoginWrapper(false)}
+                      className="absolute w-80 left-2/4 translate-x-[-50%] top-full flex flex-col max-xl:hidden"
+                    >
                       <div className="w-5 h-5 mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
                         <IoTriangle />
                       </div>
