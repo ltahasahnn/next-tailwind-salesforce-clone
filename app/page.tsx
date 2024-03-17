@@ -14,6 +14,7 @@ import Personalization from "./components/Personalization";
 import Events from "./components/Events";
 import Community from "./components/Community";
 import Discover from "./components/Discover";
+import FreeTrial from "./components/FreeTrial";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
               <Events />
               <Community />
               <Discover />
+              <FreeTrial />
             </div>
           </div>
         </div>
