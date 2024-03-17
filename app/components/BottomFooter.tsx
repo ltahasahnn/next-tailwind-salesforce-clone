@@ -76,13 +76,13 @@ const BottomFooter = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
 
   return (
-    <div className="py-6 bg-themeText-100 max-lg:px-6 sm:max-md:mt-40">
+    <div className="py-6 bg-themeText-100 max-lg:px-6 sm:max-md:mt-48">
       <div className="mx-auto max-w-7xl flex items-start max-md:gap-12 max-md:flex-col max-lg:max-w-4xl max-xl:max-w-4xl">
-        <div className="relative">
+        <div className="relative max-md:mx-auto">
           <div
             onClick={() => setOpen(!isOpen)}
             className={clsx(
-              "flex items-center gap-2 text-white mr-10 cursor-pointer max-md:mx-auto select-none",
+              "flex items-center gap-2 text-white mr-10 cursor-pointer select-none",
               isOpen && "*:text-themeText-200"
             )}
           >
@@ -94,22 +94,23 @@ const BottomFooter = () => {
             <div
               onMouseEnter={() => setOpen(true)}
               onMouseLeave={() => setOpen(false)}
-              className="absolute w-full bottom-full flex flex-col max-xl:hidden"
+              className="absolute w-full bottom-full flex flex-col"
             >
               <div className="w-5 h-5 left-2/4 bottom-3 translate-x-[-50%] absolute mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
                 <IoTriangle className="rotate-180" />
               </div>
 
-              <div className="bg-white min-w-96 mb-7 absolute left-0 bottom-full border-l shadow-[0_0px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl z-50">
+              <div className="bg-white md:min-w-96 mb-7 absolute left-0 bottom-full border-l shadow-[0_0px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl z-50 max-md:w-72 max-md:h-80 max-md:overflow-scroll max-md:p-8 max-md:left-2/4 max-md:translate-x-[-50%]">
                 <h3 className="font-bold text-xl mb-5">Worldwide</h3>
 
-                <div className="flex h-full justify-between">
+                <div className="flex h-full justify-between max-md:flex-col">
                   {bottomWrapperList.map((item, index) => (
                     <div
                       className={clsx(
-                        "min-w-40 flex flex-col h-64",
-                        index === 1 && "px-8 mx-10 border-x-2 min-w-64",
-                        index === 2 && "min-w-52"
+                        "min-w-40 flex flex-col max-md:!w-full",
+                        index === 1 &&
+                          "py-6 my-6 md:border-x-2 max-md:border-y-2 md:min-w-64",
+                        index === 2 && "md:min-w-52 pb-10"
                       )}
                     >
                       <span className="mb-4 trackig-wider">{item.title}</span>
