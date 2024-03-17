@@ -22,11 +22,13 @@ import BottomFooter from "./components/BottomFooter";
 import Image1 from "../public/assets/images/help.png";
 import { FaPhone } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
+import Brand from "./components/Brand";
 
 export default function Home() {
   return (
     <main className="flex h-dvh overflow-hidden flex-col">
       <Navbar />
+      <Brand />
       <div className="w-full h-fit overflow-scroll text-themeText-100">
         <div className="h-fit">
           <div className="xl:container mx-auto h-full max-xl:px-10">
