@@ -44,7 +44,7 @@ export default function Home() {
               <Personalization />
             </div>
             <Image src={FeaturesImage2} alt="" />
-            <div className="max-xl:py-6">
+            <div className="max-xl:px-6">
               <Events />
               <Community />
               <Discover />
