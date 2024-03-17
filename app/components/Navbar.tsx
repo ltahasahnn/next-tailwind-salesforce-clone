@@ -31,7 +31,7 @@ const Navbars = () => {
   const [navigationWrapper, setNavigationWrapper] = useState<boolean>(false);
   const [languageWrapper, setLanguageWrapper] = useState<boolean>(false);
   const [loginWrapper, setLoginWrapper] = useState<boolean>(false);
-  const [isOpen, setOpen] = useState<boolean>(true);
+  const [isOpen, setOpen] = useState<boolean>(false);
 
   const loginWrapperList = [
     {
@@ -331,7 +331,7 @@ const Navbars = () => {
 
         {isOpen && (
           <div>
-            <div className="absolute top-full left-0 bg-white w-6/12 h-dvh p-6 px-8 flex flex-col gap-8 text-themeText-100 max-md:w-full">
+            <div className="absolute z-[9999] top-full left-0 bg-white w-6/12 h-dvh p-6 px-8 flex flex-col gap-8 text-themeText-100 max-md:w-full xl:hidden">
               <ul className="flex flex-col gap-7">
                 {navItemList.map((item, index) => (
                   <li
