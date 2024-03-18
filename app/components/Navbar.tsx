@@ -166,7 +166,7 @@ const Navbars = () => {
                   <div
                     onMouseEnter={() => setNavigationWrapper(true)}
                     onMouseLeave={() => setNavigationWrapper(false)}
-                    className="absolute w-20 right-0 top-full flex flex-col"
+                    className="absolute w-20 right-0 top-full flex flex-col z-50"
                   >
                     <div className="w-5 h-5 left-2/4 translate-x-[-50%] absolute mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
                       <IoTriangle />
@@ -205,13 +205,13 @@ const Navbars = () => {
                     <div
                       onMouseEnter={() => setLanguageWrapper(true)}
                       onMouseLeave={() => setLanguageWrapper(false)}
-                      className="absolute w-full top-full flex flex-col max-xl:hidden"
+                      className="absolute w-full top-full flex flex-col max-xl:hidden z-50"
                     >
                       <div className="w-5 h-5 left-2/4 translate-x-[-50%] absolute mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
                         <IoTriangle />
                       </div>
 
-                      <div className="bg-white min-w-96 absolute right-[-200px] mt-5 border-l shadow-[0_1px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl z-50">
+                      <div className="bg-white min-w-96 absolute right-[-200px] mt-5 border-l shadow-[0_1px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl">
                         <h3 className="font-bold text-xl mb-5">
                           Change Region
                         </h3>
@@ -266,13 +266,13 @@ const Navbars = () => {
                     <div
                       onMouseEnter={() => setLoginWrapper(true)}
                       onMouseLeave={() => setLoginWrapper(false)}
-                      className="absolute w-80 left-2/4 translate-x-[-50%] top-full flex flex-col max-xl:hidden"
+                      className="absolute w-80 left-2/4 translate-x-[-50%] top-full flex flex-col max-xl:hidden z-50"
                     >
                       <div className="w-5 h-5 mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
                         <IoTriangle />
                       </div>
 
-                      <div className="bg-white border-l shadow-[0_3px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl z-50">
+                      <div className="bg-white border-l shadow-[0_3px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl">
                         <h3 className="font-bold text-xl">Login</h3>
 
                         <ul className="flex flex-col my-6">
@@ -368,7 +368,7 @@ const Navbars = () => {
               </div>
             </div>
 
-            <div className="absolute top-full right-0 w-6/12 h-dvh bg-[rgba(0,0,0,.2)] max-md:hidden"></div>
+            <div className="absolute top-full right-0 w-6/12 h-dvh bg-[rgba(0,0,0,.2)] max-md:hidden xl:hidden"></div>
           </div>
         )}
       </div>
