@@ -109,7 +109,7 @@ const BottomFooter = () => {
                       className={clsx(
                         "min-w-40 flex flex-col max-md:!w-full",
                         index === 1 &&
-                          "py-6 my-6 md:border-x-2 max-md:border-y-2 md:min-w-64",
+                          "md:px-6 md:mx-6 max-md:py-6 max-md:my-6 md:border-x-2 max-md:border-y-2 md:min-w-64",
                         index === 2 && "md:min-w-52 pb-10"
                       )}
                     >
