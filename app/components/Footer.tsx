@@ -76,9 +76,9 @@ const Footer = () => {
             <div key={index}>
               <h3 className="mb-10 font-semibold text-sm">{item.title}</h3>
 
-              <ul className="text-xs text-themeText-200">
+              <div className="text-xs text-themeText-200">
                 {item.text.map((text, idx) => (
-                  <li className="mb-4 flex items-end gap-1" key={idx}>
+                  <a href="#" className="mb-4 flex items-end gap-1" key={idx}>
                     {text}
                     {(index == 1 && idx === 6) ||
                     (index === 2 && idx === 3) ||
@@ -88,9 +88,9 @@ const Footer = () => {
                     ) : (
                       ""
                     )}
-                  </li>
+                  </a>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
         </div>
