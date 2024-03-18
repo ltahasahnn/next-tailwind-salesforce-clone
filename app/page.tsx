@@ -19,7 +19,7 @@ import NewsLetter from "./components/NewsLetter";
 import Footer from "./components/Footer";
 import BottomFooter from "./components/BottomFooter";
 
-import Image1 from "../public/assets/images/help.png";
+import ChatImage from "../public/assets/images/help.png";
 import { FaPhone } from "react-icons/fa";
 import { FaMessage } from "react-icons/fa6";
 import Brand from "./components/Brand";
@@ -63,7 +63,7 @@ export default function Home() {
             <div className="h-full flex items-center gap-4 text-sm">
               <Image
                 className="h-full w-fit rounded-full"
-                src={Image1}
+                src={ChatImage}
                 alt=""
               />
               <p className="underline text-white font-bold">Lets Chat</p>
