@@ -49,11 +49,11 @@ const Features = () => {
 
         <div className="grid grid-cols-4 mx-auto gap-4 max-sm:grid-cols-2 max-sm:gap-y-6 max-lg:gap-0">
           {list.map((item, index) => (
-            <div className="w-32">
-              <div className="rounded-full mb-4 w-24 h-24 p-6 mx-auto shadow-[0_5px_10px_0px_rgba(0,0,0,.2)] max-lg:h-20 max-lg:w-20">
+            <div className="w-36">
+              <div className="rounded-full mb-4 w-20 h-20 p-6 mx-auto shadow-[0_5px_10px_0px_rgba(0,0,0,.2)] max-lg:h-20 max-lg:w-20">
                 <Image src={item.avatar} alt="" />
               </div>
-              <div className="text-center font-bold text-base mx-auto">
+              <div className="text-center font-semimedium text-base mx-auto">
                 <a href="#">{item.text}</a>
               </div>
             </div>
