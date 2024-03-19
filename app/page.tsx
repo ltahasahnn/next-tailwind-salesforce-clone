@@ -7,7 +7,6 @@ import Customers from "./components/Customers";
 import Learning from "./components/Learning";
 import Image from "next/image";
 
-import FeaturesImage1 from "../public/assets/images/rounded.png";
 import FeaturesImage2 from "../public/assets/images/hp-page-break-img-hills.webp";
 import CRM from "./components/CRM";
 import Personalization from "./components/Personalization";
@@ -38,14 +37,22 @@ export default function Home() {
             <Features />
           </div>
           <div>
-            <Image src={FeaturesImage1} alt="" />
+            <img
+              className="w-full"
+              src="https://wp.salesforce.com/en-eu/wp-content/uploads/sites/11/2023/10/hp-industries-page-break-bg.webp?w=1024"
+              alt=""
+            />
             <div className="max-xl:px-6">
               <Customers />
               <Learning />
               <CRM />
               <Personalization />
             </div>
-            <Image src={FeaturesImage2} alt="" />
+            <img
+              className="w-full"
+              src="https://wp.salesforce.com/en-eu/wp-content/uploads/sites/11/2023/01/hp-page-break-img-hills.png?w=1024"
+              alt=""
+            />
             <div className="max-xl:px-6">
               <Events />
               <Community />
