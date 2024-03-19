@@ -2,21 +2,26 @@
 
 import { FaBars, FaSearch, FaGlobe, FaUser, FaPhone } from "react-icons/fa";
 import Button from "./Button";
-import {
-  ChevronDownIcon,
-  ChevronRightIcon,
-  UserIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
-import MobileLogo from "../../public/assets/images/salesforce-no-type-logo.svg";
-import Logo from "../../public/assets/images/salesforce.svg";
 import { useState } from "react";
 import { IoTriangle } from "react-icons/io5";
 import { FaXmark } from "react-icons/fa6";
 
+import MobileLogo from "../../public/assets/images/salesforce-no-type-logo.svg";
+import Logo from "../../public/assets/images/salesforce.svg";
+import Sidebar from "./Sidebar";
+
 const Navbars = () => {
+  const [navigationWrapper, setNavigationWrapper] = useState<boolean>(false);
+  const [languageWrapper, setLanguageWrapper] = useState<boolean>(false);
+  const [loginWrapper, setLoginWrapper] = useState<boolean>(false);
+  const [isOpen, setOpen] = useState<boolean>(false);
+  const [sidebar, setSidebar] = useState(false);
+  const [openSidebar, setOpenSidebar] = useState(false);
+  const [selectedNav, setSelectedNav] = useState<number | null>(null);
+
   const navItemList = [
     { title: "Products" },
     { title: "İndustries" },
@@ -27,12 +32,6 @@ const Navbars = () => {
     { title: "Salesforce +" },
     { title: "More" },
   ];
-
-  const [navigationWrapper, setNavigationWrapper] = useState<boolean>(false);
-  const [languageWrapper, setLanguageWrapper] = useState<boolean>(false);
-  const [loginWrapper, setLoginWrapper] = useState<boolean>(false);
-  const [isOpen, setOpen] = useState<boolean>(false);
-
   const loginWrapperList = [
     {
       text: "Products",
@@ -138,7 +137,10 @@ const Navbars = () => {
                 <Image className="h-14 my-auto" src={Logo} alt="" />
               </a>
             </div>
-            <div className="nav-items max-xl:hidden">
+            <div
+              onMouseLeave={() => setSidebar(false)}
+              className="nav-items max-xl:hidden h-full flex items-center"
+            >
               <ul className="nav-item-list flex items-center text-base text-themeText-100 font-semibold gap-5 max-[1380px]:gap-8 relative">
                 {navItemList.map((item, index) => (
                   <li
@@ -148,9 +150,17 @@ const Navbars = () => {
                     onMouseLeave={() =>
                       index === 7 && setNavigationWrapper(false)
                     }
+                    onClick={() => {
+                      index != 7 && setSidebar(true),
+                        setOpenSidebar(sidebar),
+                        setSelectedNav(index);
+                    }}
                     key={index}
                     className={clsx(
                       "nav-item flex items-center hover:text-primary-100 duration-200 cursor-pointer min-w-16",
+                      selectedNav === index &&
+                        openSidebar &&
+                        "text-primary-100",
                       index > 4 && index < 7 && "max-[1380px]:hidden",
                       index === 7 && "min-[1380px]:hidden"
                     )}
@@ -329,48 +339,12 @@ const Navbars = () => {
           </div>
         </div>
 
-        {isOpen && (
-          <div>
-            <div className="absolute z-[9999] top-full left-0 bg-white w-6/12 h-dvh p-6 px-8 flex flex-col gap-8 text-themeText-100 max-md:w-full xl:hidden">
-              <ul className="flex flex-col gap-7">
-                {navItemList.map((item, index) => (
-                  <li
-                    key={index}
-                    className={clsx(
-                      "flex justify-between text-2xl font-bold",
-                      index === 7 && "hidden"
-                    )}
-                  >
-                    {item.title}
-
-                    <ChevronRightIcon className="w-7 h-7 text-slate-500" />
-                  </li>
-                ))}
-              </ul>
-
-              <hr />
-
-              <ul className="flex flex-col gap-5">
-                {navList.map((item, index) => (
-                  <li key={index} className="flex gap-2">
-                    <item.icon
-                      className={clsx("w-5 h-5", index === 1 && "rotate-90")}
-                    />
-                    {item.title}
-
-                    <ChevronRightIcon className="ml-auto w-7 h-7" />
-                  </li>
-                ))}
-              </ul>
-
-              <div className="font-bold mb-16 mt-auto text-center">
-                <a href="#">00800 7253 3333</a>
-              </div>
-            </div>
-
-            <div className="absolute top-full right-0 w-6/12 h-dvh bg-[rgba(0,0,0,.2)] max-md:hidden xl:hidden"></div>
-          </div>
-        )}
+        <Sidebar
+          onMouseEnter={() => setSidebar(true)}
+          selected={selectedNav}
+          openSidebar={openSidebar}
+          sidebar={sidebar}
+        />
       </div>
       <div className="nav-sticky"></div>
     </header>
