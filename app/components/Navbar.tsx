@@ -284,11 +284,11 @@ const Navbars = () => {
                       onMouseLeave={() => setLoginWrapper(false)}
                       className="absolute w-80 left-2/4 translate-x-[-50%] top-full flex flex-col max-xl:hidden z-50"
                     >
-                      <div className="w-5 h-5 mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.15)]">
+                      <div className="w-5 h-5 mx-auto text-center text-2xl text-white drop-shadow-[0_0_2px_rgba(0,0,0,.1)]">
                         <IoTriangle />
                       </div>
 
-                      <div className="bg-white border-l shadow-[0_3px_5px_0px_rgba(0,0,0,.15)] p-6 rounded-2xl">
+                      <div className="bg-white mt-0.5 border-l shadow-[0_0px_5px_1px_rgba(0,0,0,.15)] p-6 rounded-2xl">
                         <h3 className="font-bold text-xl">Login</h3>
 
                         <ul className="flex flex-col my-6">
