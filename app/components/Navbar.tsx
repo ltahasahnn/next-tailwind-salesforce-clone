@@ -244,13 +244,13 @@ const Navbars = () => {
                                   <div
                                     key={index}
                                     className={clsx(
-                                      "underline text-sm mb-1 !text-zinc-600",
+                                      "underline text-sm mb-1 !text-zinc-600 w-fit",
                                       index === 1 &&
                                         idx === 7 &&
                                         "text-themeText-200"
                                     )}
                                   >
-                                    {text}
+                                    <a href="#">{text}</a>
                                   </div>
                                 ))}
                               </div>
