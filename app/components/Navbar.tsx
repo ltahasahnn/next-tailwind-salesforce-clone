@@ -2,7 +2,7 @@
 
 import { FaBars, FaSearch, FaGlobe, FaUser, FaPhone } from "react-icons/fa";
 import Button from "./Button";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
 import { useState } from "react";
@@ -112,17 +112,23 @@ const Navbars = () => {
     <header>
       <div className="nav bg-white relative">
         <div className="xl:px-10 text-sm max-xl:px-6 max-xl:h-14 max-xl:py-2 h-24 py-4 mx-auto">
-          <div className="h-full flex items-center gap-8">
+          <div className="h-full flex items-center sm:gap-8">
             <div className="h-full flex items-center gap-5 max-sm:gap-3 xl:hidden">
               <FaBars
                 onClick={() => setOpen(!isOpen)}
-                className={clsx("text-2xl cursor-pointer", isOpen && "hidden")}
+                className={clsx(
+                  "text-2xl cursor-pointer min-h-20",
+                  isOpen && "hidden"
+                )}
               />
               <FaXmark
                 onClick={() => setOpen(!isOpen)}
-                className={clsx("text-2xl cursor-pointer", !isOpen && "hidden")}
+                className={clsx(
+                  "text-2xl cursor-pointer min-h-20",
+                  !isOpen && "hidden"
+                )}
               />
-              <div className="h-full">
+              <div className="h-full min-w-16">
                 <a className="h-14" href="">
                   <Image
                     className="h-full my-auto max-sm:py-1"
@@ -339,6 +345,49 @@ const Navbars = () => {
           </div>
         </div>
 
+        {isOpen && (
+          <div className="absolute top-full left-0 bg-white w-6/12 h-dvh p-6 px-8 flex flex-col gap-8 text-themeText-100 max-md:w-full">
+            <div className="absolute !z-[9999] left-0 bg-white w-full h-dvh p-6 px-8 flex flex-col gap-8 text-themeText-100 max-md:w-full xl:hidden">
+              <ul className="flex flex-col gap-7">
+                {navItemList.map((item, index) => (
+                  <li
+                    key={index}
+                    className={clsx(
+                      "flex justify-between text-2xl font-bold",
+                      index === 7 && "hidden"
+                    )}
+                  >
+                    {item.title}
+
+                    <ChevronRightIcon className="w-7 h-7 text-slate-500" />
+                  </li>
+                ))}
+              </ul>
+
+              <hr />
+
+              <ul className="flex flex-col gap-5">
+                {navList.map((item, index) => (
+                  <li key={index} className="flex gap-2">
+                    <item.icon
+                      className={clsx("w-5 h-5", index === 1 && "rotate-90")}
+                    />
+                    {item.title}
+
+                    <ChevronRightIcon className="ml-auto w-7 h-7" />
+                  </li>
+                ))}
+              </ul>
+
+              <div className="font-bold mb-16 mt-auto text-center">
+                <a href="#">00800 7253 3333</a>
+              </div>
+            </div>
+
+            <div className="absolute top-full right-0 w-6/12 h-dvh bg-[rgba(0,0,0,.2)] max-md:hidden"></div>
+          </div>
+        )}
+
         <Sidebar
           onMouseEnter={() => setSidebar(true)}
           selected={selectedNav}
@@ -346,7 +395,6 @@ const Navbars = () => {
           sidebar={sidebar}
         />
       </div>
-      <div className="nav-sticky"></div>
     </header>
   );
 };
