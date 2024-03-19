@@ -23,6 +23,7 @@ const config: Config = {
         primary:{
           100:"#0284c7",
           200:"#e0f2fe",
+          300:"rgb(234, 245, 254)"
         },
         secondary:{
           100:"#047857",
