@@ -124,7 +124,7 @@ const BottomFooter = () => {
                               index === 1 && idx === 7 && "text-themeText-200"
                             )}
                           >
-                            {text}
+                            <a href="#">{text}</a>
                           </div>
                         ))}
                       </div>
@@ -138,22 +138,26 @@ const BottomFooter = () => {
 
         <div>
           <div className="flex w-full p-2 gap-4 max-xl:gap-2 max-xl:flex-col">
-            <ul className="flex flex-wrap my-auto gap-4 text-xs items-center">
+            <div className="flex flex-wrap my-auto gap-4 text-xs items-center">
               {list.map((item, index) => (
-                <li
+                <a
+                  href="#"
                   className="underline text-white hover:text-themeText-200"
                   key={index}
                 >
                   {item.text}
-                </li>
+                </a>
               ))}
               <div className="flex items-center gap-2">
                 <Image src={BottomFooterImage} className="h-3 w-fit" alt="" />
-                <p className="underline text-white hover:text-themeText-200 text-xs">
+                <a
+                  href="#"
+                  className="underline text-white hover:text-themeText-200 text-xs"
+                >
                   Your Privacy Choices
-                </p>
+                </a>
               </div>
-            </ul>
+            </div>
           </div>
 
           <div className="text-white text-xs p-2">
