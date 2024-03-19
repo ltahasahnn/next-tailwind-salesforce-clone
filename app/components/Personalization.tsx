@@ -29,7 +29,7 @@ const Personalization = () => {
     },
   ];
   return (
-    <div className="my-20">
+    <div className="mt-20">
       <div>
         <div className="flex justify-between gap-10 mt-16 mx-auto max-w-7xl max-md:flex-col max-lg:mt-10 max-lg:gap-8 lg:max-[1380px]:px-6">
           {list.map((item, index) => (
